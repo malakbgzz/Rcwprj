@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $total = shell_exec($command);
     
     // Appeler le script Python qui calcul la taxe
-    $command = "python3 calculate_tax.py " . escapeshellarg($total);
+    $command = "python calculate_tax.py " . escapeshellarg($total);
     $tax = shell_exec($command);
     
     $totalWithTax = $total + $tax;
